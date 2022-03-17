@@ -1,14 +1,17 @@
 
 import './App.css';
-import Map from './components/Map';
 import { useState } from "react";
 import { useEffect } from "react";
+import Header from './Pages/Header';
+import HomePage from './Pages/HomePage';
 import axios from "axios";
+import { Route, Routes } from "react-router-dom";
 
 const App=()=> {
 
+  
   const [data, setData] = useState([]);
-
+ 
   useEffect(()=>{
 
 
@@ -26,9 +29,17 @@ const App=()=> {
     
   },[])
 
+  data.forEach(element => {
+    console.log(data[0][2]);
+  });
+
   return (
     <div className="App">
-      <Map flights={data}/>
+      <Header/>
+      <Routes>
+            <Route path="/" element={<HomePage flights={data}/>} />
+      </Routes>   
+      
     </div>
   );
 }
