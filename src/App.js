@@ -1,13 +1,13 @@
-
 import './App.css';
-import { useState } from "react";
-import { useEffect } from "react";
+import { useState, useEffect } from "react";
 import Header from './Pages/Header';
 import HomePage from './Pages/HomePage';
 import axios from "axios";
 import Contact from "./components/Contact"
 import Loic from "./images/loic.jpeg";
 import { Route, Routes } from "react-router-dom";
+import Map from "./components/Map"
+
 
 
 const App=()=> {
@@ -32,9 +32,10 @@ const App=()=> {
     
   },[])
 
-  data.forEach(element => {
-    console.log(data[0][2]);
-  });
+  // console.log(data)
+  // data.forEach(element => {
+  //   console.log(data[0][2]);
+  // });
 
   return (
     <div className="App">
