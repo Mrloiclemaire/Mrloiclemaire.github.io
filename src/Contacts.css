@@ -1,0 +1,65 @@
+.contact-card {
+border-radius: 8%;
+background-color: #00A4FF;
+font-family: 'Inter', sans-serif;
+max-width: 20rem;
+color:white;
+box-sizing: border-box;
+}
+
+.contact-card__name{
+font-weight: 700;
+font-size:1.5rem;
+margin-bottom:1rem;
+}
+
+.contact-card__photo {
+max-height: 10rem;
+max-width: 10rem;
+border-radius: 50%;
+}
+
+
+.contact-card__linkedin {
+font-weight: 500;
+display: flex;
+align-items: center;
+margin-left: 1.2rem;
+font-style: italic;
+font-size: 12px;
+}
+
+.contact-card__linkedin--logo {
+height:1.5rem;
+margin-right: 0.5rem;
+}
+
+
+.contact-card__linkedin--mail {
+text-decoration: none;
+color: white;
+margin-bottom:0rem;
+
+}
+
+
+.contact-card__email{
+display: flex;
+font-weight: 500;
+align-items: center;
+margin-top:0;
+margin-left: 1rem;
+padding-right: 2rem;
+font-style: italic;
+font-size: 12px;
+}
+
+.contact-card__email--picto {
+height: 1.5rem;
+margin-right: 0.3rem;
+margin-bottom: 0.9rem;
+}
+
+.contact-card__email--text{
+    margin-top: 0;
+    }
