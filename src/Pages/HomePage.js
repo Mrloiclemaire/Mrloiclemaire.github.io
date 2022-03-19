@@ -1,12 +1,14 @@
 import Map from "../components/Map";
+import Filter from "../components/Filter"
 
 
-const HomePage = ({flights}) => {
+const HomePage = ({flights, setFilter, filter}) => {
 
 
     return(
     <>
-        <Map flights={flights}/>
+        <Filter flights={flights} setFilter={setFilter}/>
+        <Map flights={flights} filter={filter}/>
     </>
 
     )

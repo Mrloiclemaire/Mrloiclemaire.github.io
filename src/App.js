@@ -6,17 +6,16 @@ import axios from "axios";
 import Contact from "./components/Contact"
 import Loic from "./images/loic.jpeg";
 import { Route, Routes } from "react-router-dom";
-import Map from "./components/Map"
-
-
+import Map from "./components/Map.js"
 
 const App=()=> {
 
+  const [countryFilter, setCountryFilter] = useState([])
+
+
   
   const [data, setData] = useState([]);
- 
   useEffect(()=>{
-
 
     const getData= async (e) => {
       const url = "https://opensky-network.org/api/states/all";
@@ -25,21 +24,17 @@ const App=()=> {
       
       setData(data.states);
     };
-
-
-    
     getData();
     
   },[])
 
-  // console.log(data)
-  // data.forEach(element => {
-  //   console.log(data[0][2]);
-  // });
-
   return (
     <div className="App">
-
+      <Header/>
+      <Routes>
+            <Route path="/" element={<HomePage flights={data} setFilter={setCountryFilter} filter={countryFilter}/>} />
+      </Routes>  
+{/* 
       <Contact
         img={Loic}
         name="Loïc Lemaire"
@@ -54,19 +49,13 @@ const App=()=> {
         linkedinname="linkedin/alexandrekermarec"
         email="alexandre@gmail.com"
       />
-       <Contact
+      <Contact
         img={Loic}
         name="Agathe Geniteau"
         linkedinurl="https://www.linkedin.com/in/mrlo%C3%AFclemaire/"
         linkedinname="linkedin/agathegeniteau"
         email="agathe@gmail.com"
-      />
-      <Map flights={data}/>
-
-      <Header/>
-      <Routes>
-            <Route path="/" element={<HomePage flights={data}/>} />
-      </Routes>   
+      />  */}
       
 
     </div>
