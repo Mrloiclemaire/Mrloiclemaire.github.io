@@ -1,14 +1,14 @@
 import Map from "../components/Map";
-import Filter from "../components/Filter"
+import CountryFilter from "../components/CountryFilter"
 
 
-const HomePage = ({flights, setFilter, filter}) => {
+const HomePage = ({flights, setCountryFilter, countryFilter, setFlightNumberFilter,flightNumberFilter}) => {
 
 
     return(
     <>
-        <Filter flights={flights} setFilter={setFilter}/>
-        <Map flights={flights} filter={filter}/>
+        <CountryFilter flights={flights} setCountryFilter={setCountryFilter} setFlightNumberFilter={setFlightNumberFilter}/>
+        <Map flights={flights} countryFilter={countryFilter} flightNumberFilter={flightNumberFilter} />
     </>
 
     )

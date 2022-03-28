@@ -7,13 +7,14 @@ import Contact from "./components/Contact"
 import Loic from "./images/loic.jpeg";
 import { Route, Routes } from "react-router-dom";
 import Map from "./components/Map.js"
+import FlightNumberSearchBar from './components/FlightNumberSearchBar';
 
 const App=()=> {
 
   const [countryFilter, setCountryFilter] = useState([])
+  const [flightNumberFilter,setFlightNumberFilter] = useState("")
 
 
-  
   const [data, setData] = useState([]);
   useEffect(()=>{
 
@@ -31,8 +32,9 @@ const App=()=> {
   return (
     <div className="App">
       <Header/>
+      <FlightNumberSearchBar setFlightNumberFilter={setFlightNumberFilter} setCountryFilter={setCountryFilter} flightNumberFilter={flightNumberFilter} />
       <Routes>
-            <Route path="/" element={<HomePage flights={data} setFilter={setCountryFilter} filter={countryFilter}/>} />
+            <Route path="/" element={<HomePage flights={data} setCountryFilter={setCountryFilter} countryFilter={countryFilter} setFlightNumberFilter={setFlightNumberFilter} flightNumberFilter={flightNumberFilter} />} />
       </Routes>  
 {/* 
       <Contact
