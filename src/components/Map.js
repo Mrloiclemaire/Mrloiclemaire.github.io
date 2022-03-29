@@ -32,10 +32,11 @@ const Map=({flights, countryFilter,flightNumberFilter})=> {
 
   for (let i= 0; i < flightCoordinate.length; i++) {
     if(!!countryFilter && flightCoordinate[i].departure === countryFilter ){
+      const el = document.createElement("div");
       el.className="marker"
-      el.style.backgroundImage= `url(https://cdn-icons.flaticon.com/png/512/1365/premium/1365888.png?token=exp=1648242462~hmac=518f18198b5c55976e8e863a47565094)` ;
-      el.style.width="50px";
-      el.style.height="50px";
+      el.style.backgroundImage= `url(https://d29fhpw069ctt2.cloudfront.net/icon/image/49621/preview.svg)` ;
+      el.style.width="40px";
+      el.style.height="40px";
       el.style.backgroundSize = '100%';
       const marker = new mapboxgl.Marker(el)
       .setLngLat([flightCoordinate[i].longitude, flightCoordinate[i].latitude])
@@ -45,10 +46,11 @@ const Map=({flights, countryFilter,flightNumberFilter})=> {
 
 
     } else if ( !!flightNumberFilter && flightCoordinate[i].flightNumber === flightNumberFilter){
+      const el = document.createElement("div");
       el.className="marker"
-      el.style.backgroundImage= `url(https://cdn-icons.flaticon.com/png/512/1365/premium/1365888.png?token=exp=1648242462~hmac=518f18198b5c55976e8e863a47565094)` ;
-      el.style.width="50px";
-      el.style.height="50px";
+      el.style.backgroundImage= `url(https://d29fhpw069ctt2.cloudfront.net/icon/image/49621/preview.svg` ;
+      el.style.width="40px";
+      el.style.height="40px";
       el.style.backgroundSize = '100%';
       const marker = new mapboxgl.Marker(el)
     .setLngLat([flightCoordinate[i].longitude, flightCoordinate[i].latitude])
