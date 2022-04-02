@@ -10,7 +10,7 @@ const HomePage = ({flights, setCountryFilter, countryFilter, setFlightNumberFilt
     return(
     <>
         <FlightNumberSearchBar setFlightNumberFilter={setFlightNumberFilter} setCountryFilter={setCountryFilter} flightNumberFilter={flightNumberFilter} />
-        <CountryFilter flights={flights} setCountryFilter={setCountryFilter} setFlightNumberFilter={setFlightNumberFilter}/>
+        <CountryFilter flights={flights} setCountryFilter={setCountryFilter} setFlightNumberFilter={setFlightNumberFilter} countryFilter={countryFilter}/>
         <Map flights={flights} countryFilter={countryFilter} flightNumberFilter={flightNumberFilter} />
        
     </>
