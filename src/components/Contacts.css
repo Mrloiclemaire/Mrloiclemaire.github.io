@@ -1,11 +1,30 @@
+.flex {
+    display: flex;
+    justify-content: space-around;
+}
+
+h3 {
+    margin-top: 100px;
+    margin-bottom: 50px;
+    font-size: 50px;
+    background: #8921CF;
+    background: -webkit-repeating-linear-gradient(to bottom right, #8921CF 0%, #36CACF 100%);
+    background: -moz-repeating-linear-gradient(to bottom right, #8921CF 0%, #36CACF 100%);
+    background: repeating-linear-gradient(to bottom right, #8921CF 0%, #36CACF 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
 .contact-card {
 border-radius: 8%;
 background-color: #00A4FF;
 font-family: 'Inter', sans-serif;
-max-width: 20rem;
-color:white;
+width: 18%;
+colmaxor:white;
 box-sizing: border-box;
+margin: 10px;
 }
+
 
 .contact-card__name{
 font-weight: 700;

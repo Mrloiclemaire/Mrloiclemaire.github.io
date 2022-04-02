@@ -38,22 +38,24 @@ const Map=({flights, countryFilter,flightNumberFilter})=> {
       .setLngLat([flightCoordinate[i].longitude, flightCoordinate[i].latitude])
       .setRotation(flightCoordinate[i].rotation -45)
       .setRotationAlignment("viewport")
-      .setPopup(new mapboxgl.Popup().setHTML(`<h3>Flight number : ${flightCoordinate[i].flightNumber}</h3><p>Current altitude : ${flightCoordinate[i].altitude} m</p><p>Speed : ${Math.floor(flightCoordinate[i].speed*3.6)} km/h </p>`))
+      .setPopup(new mapboxgl.Popup().setHTML(`<h4>Flight number : ${flightCoordinate[i].flightNumber}</h4><p>Current altitude : ${flightCoordinate[i].altitude} m</p><p>Speed : ${Math.floor(flightCoordinate[i].speed*3.6)} km/h </p>`))
       .addTo(map.current)
-      
+
 
 
     } else if ( !!flightNumberFilter && flightCoordinate[i].flightNumber === flightNumberFilter){
       const el = document.createElement("div");
       el.className="marker"
+
       el.style.backgroundImage= `url(https://d29fhpw069ctt2.cloudfront.net/icon/image/49621/preview.svg)` ;
       el.style.width="30px";
       el.style.height="30px";
+
       el.style.backgroundSize = '100%';
       const marker = new mapboxgl.Marker(el)
     .setLngLat([flightCoordinate[i].longitude, flightCoordinate[i].latitude])
     .setRotation(flightCoordinate[i].rotation - 45)
-    .setPopup(new mapboxgl.Popup().setHTML(`<h3>Flight number : ${flightCoordinate[i].flightNumber}</h3><p>Current altitude : ${flightCoordinate[i].altitude} m</p><p>Speed : ${Math.floor(flightCoordinate[i].speed*3.6)} km/h </p>`))
+    .setPopup(new mapboxgl.Popup().setHTML(`<h4>Flight number : ${flightCoordinate[i].flightNumber}</h4><p>Current altitude : ${flightCoordinate[i].altitude} m</p><p>Speed : ${Math.floor(flightCoordinate[i].speed*3.6)} km/h </p>`))
     .addTo(map.current);
 
     
