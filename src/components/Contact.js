@@ -8,6 +8,7 @@ const Contact = () => {
 
 
 return (
+
 <>
 <h3>That's us !</h3>
     <div className="flex">
