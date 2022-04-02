@@ -13,6 +13,11 @@
   }
 }
 
+
+body { margin: 0; padding: 0; }
+#map { position: absolute; top: 0; bottom: 0; width: 100%; }
+
+
 .App-header {
   background-color: #282c34;
   min-height: 100vh;
