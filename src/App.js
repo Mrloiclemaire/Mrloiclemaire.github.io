@@ -8,61 +8,40 @@ import Loic from "./images/loic.jpeg";
 import Footer from"./components/Footer";
 import { Route, Routes } from "react-router-dom";
 import Map from "./components/Map.js"
-import FlightNumberSearchBar from './components/FlightNumberSearchBar';
+
 
 const App=()=> {
 
   const [countryFilter, setCountryFilter] = useState([])
   const [flightNumberFilter,setFlightNumberFilter] = useState("")
 
+  const getData= async (e) => {
+    const url = "https://opensky-network.org/api/states/all";
+
+    const {data} = await axios(url);
+    
+    setData(data.states);
+  }
 
   const [data, setData] = useState([]);
+
   useEffect(()=>{
 
-    const getData= async (e) => {
-      const url = "https://opensky-network.org/api/states/all";
-  
-      const {data} = await axios(url);
-      
-      setData(data.states);
-    };
+    
     getData();
+
+    const interval = setInterval(getData,3000)
     
   },[])
 
   return (
     <div className="App">
       <Header/>
-
-      {/* <Contact
-        img={Loic}
-        name="Loïc Lemaire"
-        linkedinurl="https://www.linkedin.com/in/mrlo%C3%AFclemaire/"
-        linkedinname="linkedin/loiclemaire"
-        email="loic@gmail.com"
-      />
-      <Contact
-        img={Loic}
-        name="Alexandre Kermarec"
-        linkedinurl="https://www.linkedin.com/in/mrlo%C3%AFclemaire/"
-        linkedinname="linkedin/alexandrekermarec"
-        email="alexandre@gmail.com"
-      />
-      <Contact
-        img={Loic}
-        name="Agathe Geniteau"
-        linkedinurl="https://www.linkedin.com/in/mrlo%C3%AFclemaire/"
-        linkedinname="linkedin/agathegeniteau"
-        email="agathe@gmail.com"
-      /> */}
-      <FlightNumberSearchBar setFlightNumberFilter={setFlightNumberFilter} setCountryFilter={setCountryFilter} flightNumberFilter={flightNumberFilter} />
       <Routes>
             <Route path="/" element={<HomePage flights={data} setCountryFilter={setCountryFilter} countryFilter={countryFilter} setFlightNumberFilter={setFlightNumberFilter} flightNumberFilter={flightNumberFilter} />} />
-      </Routes>
+            <Route path="/contact" element={<Contact/>}/>
+      </Routes>  
       <Footer/>
-
-
-      
     </div>
   );
 }

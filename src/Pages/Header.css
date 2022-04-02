@@ -1,3 +1,84 @@
-p{
-    
+.plane {
+
+    height: 15vh;
+    margin-left: 5px;
+    margin-top: 0px;
+    float : left;
+  
 }
+
+h1 {
+    font-size: 50px;
+    margin-top: 20px;
+    text-align: center;
+    background: #0E05FF;
+    background: -webkit-linear-gradient(to top right, #0E05FF 0%, #000003 100%);
+    background: -moz-linear-gradient(to top right, #0E05FF 0%, #000003 100%);
+    background: linear-gradient(to top right, #0E05FF 0%, #000003 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+
+.cta--burger {
+    position: absolute;
+    top: 10px;
+    right: 23px;
+    height: 17px;
+    width: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    z-index: 2;
+}
+
+.cta--burger .trait {
+    height: 2px;
+    width: 100%;
+    background-color: #000;
+}
+.cta--burger .trait-small {
+    height: 2px;
+    width: 60%;
+    background-color: #000;
+}
+
+header {
+    height: 100px;
+}
+
+
+.menu--burger {
+    height: 10vh;
+    width: 35%;
+    background: linear-gradient(to right, black, #163BAF);
+    color: whitesmoke;
+    opacity: 90%;
+    position: absolute;
+    top: 0;
+    right: 0;
+   
+}
+
+.opened {
+    transform: translateX(0%);
+}
+.closed {
+    transform: translateX(100%);
+}
+
+.menu--burger ul li {
+    list-style: none;
+    text-align: left;
+    padding-top: 5px;
+    color: white;
+    font-style: 20px;
+}
+
+.menu--burger ul {
+    padding-left: 15px;
+    padding-top: 5px;
+    margin-top: 0;
+}
+
