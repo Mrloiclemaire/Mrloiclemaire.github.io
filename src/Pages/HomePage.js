@@ -3,6 +3,7 @@ import CountryFilter from "../components/CountryFilter"
 import FlightNumberSearchBar from '../components/FlightNumberSearchBar';
 
 
+
 const HomePage = ({flights, setCountryFilter, countryFilter, setFlightNumberFilter,flightNumberFilter}) => {
 
 
@@ -11,6 +12,7 @@ const HomePage = ({flights, setCountryFilter, countryFilter, setFlightNumberFilt
         <FlightNumberSearchBar setFlightNumberFilter={setFlightNumberFilter} setCountryFilter={setCountryFilter} flightNumberFilter={flightNumberFilter} />
         <CountryFilter flights={flights} setCountryFilter={setCountryFilter} setFlightNumberFilter={setFlightNumberFilter}/>
         <Map flights={flights} countryFilter={countryFilter} flightNumberFilter={flightNumberFilter} />
+       
     </>
 
     )

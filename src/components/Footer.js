@@ -6,11 +6,9 @@ export default function Footer(){
 return (
     <div className="content">
     <div className="list">
-    <p>Home</p>
-    <p>Contact</p>
     </div>
     <div className="wcs">
-    <p>Site réalisé par les élèves de la </p>
+    <p>Website by the students from </p>
     <img className="logo" src={Logowcs} alt="WildCodeSchool"/>
     </div>
     </div>

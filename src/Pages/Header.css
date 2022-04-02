@@ -1,7 +1,7 @@
 .plane {
 
     height: 120px;
-    width: 180px;
+    width: 200px;
     margin-left: 10px;
     margin-top: 0px;
     float : left;
@@ -9,12 +9,7 @@
 }
 
 
-@media screen and (max-width: 576px) {
-    .plane{
-       height: 10vh;
-       margin-top: 40px;
-    }
-}
+
 
 
 h1 {
@@ -30,11 +25,6 @@ h1 {
     -webkit-text-fill-color: transparent;
 }
 
-@media (min-width: 576px) {
-   h1{
-        font-size: 50px;
-   }
-}
 
 .cta--burger {
     position: absolute;
@@ -98,3 +88,15 @@ header {
     margin-top: 0;
 }
 
+@media screen and (max-width: 576px) {
+    .plane{
+       height: 50px;
+       width: 85px;
+       margin-top: 10px;
+    }
+
+    h1 {
+        font-size: 35px;
+     
+    }
+}
