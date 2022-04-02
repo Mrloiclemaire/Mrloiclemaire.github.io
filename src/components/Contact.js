@@ -5,6 +5,7 @@ import Email from "../images/emailpicto.png"
 
 export default function Contact(props){
 return (
+    <div className="contacts">
     <div className="contact-card">
         <img className="contact-card__photo"src={props.img} alt="Loïc" height="200" />
         <h2 className="contact-card__name">{props.name}</h2>
@@ -15,6 +16,7 @@ return (
     <div className="contact-card__email">
         <img className="contact-card__email--picto" alt="email" src={Email}/>
         <p className="contact-card__email--text">{props.email}</p>
+    </div>
     </div>
     </div>
 )

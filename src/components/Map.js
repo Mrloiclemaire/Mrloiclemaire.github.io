@@ -67,7 +67,7 @@ const Map=({flights, countryFilter,flightNumberFilter})=> {
         <div ref={mapContainer} className="map-container" />
         </div>
     </div>
-    
+
   );
 }
 

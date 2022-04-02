@@ -3,8 +3,9 @@ import { useState, useEffect } from "react";
 import Header from './Pages/Header';
 import HomePage from './Pages/HomePage';
 import axios from "axios";
-import Contact from "./components/Contact"
+import Contact from "./components/Contact";
 import Loic from "./images/loic.jpeg";
+import Footer from"./components/Footer";
 import { Route, Routes } from "react-router-dom";
 import Map from "./components/Map.js"
 import FlightNumberSearchBar from './components/FlightNumberSearchBar';
@@ -32,12 +33,8 @@ const App=()=> {
   return (
     <div className="App">
       <Header/>
-      <FlightNumberSearchBar setFlightNumberFilter={setFlightNumberFilter} setCountryFilter={setCountryFilter} flightNumberFilter={flightNumberFilter} />
-      <Routes>
-            <Route path="/" element={<HomePage flights={data} setCountryFilter={setCountryFilter} countryFilter={countryFilter} setFlightNumberFilter={setFlightNumberFilter} flightNumberFilter={flightNumberFilter} />} />
-      </Routes>  
-{/* 
-      <Contact
+
+      {/* <Contact
         img={Loic}
         name="Loïc Lemaire"
         linkedinurl="https://www.linkedin.com/in/mrlo%C3%AFclemaire/"
@@ -57,9 +54,15 @@ const App=()=> {
         linkedinurl="https://www.linkedin.com/in/mrlo%C3%AFclemaire/"
         linkedinname="linkedin/agathegeniteau"
         email="agathe@gmail.com"
-      />  */}
-      
+      /> */}
+      <FlightNumberSearchBar setFlightNumberFilter={setFlightNumberFilter} setCountryFilter={setCountryFilter} flightNumberFilter={flightNumberFilter} />
+      <Routes>
+            <Route path="/" element={<HomePage flights={data} setCountryFilter={setCountryFilter} countryFilter={countryFilter} setFlightNumberFilter={setFlightNumberFilter} flightNumberFilter={flightNumberFilter} />} />
+      </Routes>
+      <Footer/>
 
+
+      
     </div>
   );
 }
