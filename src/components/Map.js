@@ -5,6 +5,7 @@ import $ from 'jquery';
 
 
 
+
 const Map=({flights, countryFilter,flightNumberFilter})=> {
 	mapboxgl.accessToken = 'pk.eyJ1IjoiYWxleGtlcmJsYSIsImEiOiJja3kzYWlxbmYwMDg1MnhvbjV6MHBiOHplIn0.k3LrOobdBO8e_hnBQq6Z7Q';
   const mapContainer = useRef(null);
@@ -25,7 +26,7 @@ const Map=({flights, countryFilter,flightNumberFilter})=> {
     {longitude: flight[5] , latitude: flight[6], flightNumber: flight[1].replace(/ /g,''),departure: flight[2], rotation : flight[10], altitude: flight[13], speed : flight[9]}
   ))
 
-  
+
   for (let i= 0; i < flightCoordinate.length; i++) {
     if(!!countryFilter && flightCoordinate[i].departure === countryFilter ){
       const el = document.createElement("div");
@@ -38,7 +39,7 @@ const Map=({flights, countryFilter,flightNumberFilter})=> {
       .setLngLat([flightCoordinate[i].longitude, flightCoordinate[i].latitude])
       .setRotation(flightCoordinate[i].rotation -45)
       .setRotationAlignment("viewport")
-      .setPopup(new mapboxgl.Popup().setHTML(`<h4>Flight number : ${flightCoordinate[i].flightNumber}</h4><p>Current altitude : ${flightCoordinate[i].altitude} m</p><p>Speed : ${Math.floor(flightCoordinate[i].speed*3.6)} km/h </p>`))
+      .setPopup(new mapboxgl.Popup().setHTML(`<h4>Flight number : ${flightCoordinate[i].flightNumber ? flightCoordinate[i].flightNumber : "Unknown" }</h4><p>Current altitude : ${flightCoordinate[i].altitude ? flightCoordinate[i].altitude +" m": "Unknown"} </p><p>Speed : ${Math.floor(flightCoordinate[i].speed*3.6) ? Math.floor(flightCoordinate[i].speed*3.6 )+" Km/h" : "Unknown"}</p>`))
       .addTo(map.current)
 
 
@@ -55,7 +56,7 @@ const Map=({flights, countryFilter,flightNumberFilter})=> {
       const marker = new mapboxgl.Marker(el)
     .setLngLat([flightCoordinate[i].longitude, flightCoordinate[i].latitude])
     .setRotation(flightCoordinate[i].rotation - 45)
-    .setPopup(new mapboxgl.Popup().setHTML(`<h4>Flight number : ${flightCoordinate[i].flightNumber}</h4><p>Current altitude : ${flightCoordinate[i].altitude} m</p><p>Speed : ${Math.floor(flightCoordinate[i].speed*3.6)} km/h </p>`))
+    .setPopup(new mapboxgl.Popup().setHTML(`<h4>Flight number : ${flightCoordinate[i].flightNumber ? flightCoordinate[i].flightNumber : "Unknown" }</h4><p>Current altitude : ${flightCoordinate[i].altitude ? flightCoordinate[i].altitude +" m": "Unknown"} </p><p>Speed : ${Math.floor(flightCoordinate[i].speed*3.6) ? Math.floor(flightCoordinate[i].speed*3.6 )+" Km/h" : "Unknown"}</p>`))
     .addTo(map.current);
 
     
@@ -75,6 +76,7 @@ const Map=({flights, countryFilter,flightNumberFilter})=> {
     <div> 
       <div className="map">
         <div ref={mapContainer} className="map-container" />
+      
         </div>
     </div>
     

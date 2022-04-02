@@ -10,9 +10,9 @@ import Map from "./components/Map.js"
 
 
 const App=()=> {
-
-  const [countryFilter, setCountryFilter] = useState([])
+  const [countryFilter, setCountryFilter] = useState("")
   const [flightNumberFilter,setFlightNumberFilter] = useState("")
+
 
   const getData= async (e) => {
     const url = "https://opensky-network.org/api/states/all";
@@ -29,7 +29,7 @@ const App=()=> {
     
     getData();
 
-    const interval = setInterval(getData,3000)
+    // const interval = setInterval(getData,3000)
     
   },[])
 
