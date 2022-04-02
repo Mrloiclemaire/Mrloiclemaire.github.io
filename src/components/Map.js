@@ -41,7 +41,7 @@ const Map=({flights, countryFilter,flightNumberFilter})=> {
       const marker = new mapboxgl.Marker(el)
       .setLngLat([flightCoordinate[i].longitude, flightCoordinate[i].latitude])
       .setRotation(flightCoordinate[i].rotation)
-      .setPopup(new mapboxgl.Popup().setHTML(`<h3>Flight number : ${flightCoordinate[i].flightNumber}</h3><p>Current altitude : ${flightCoordinate[i].altitude} m</p><p>Speed : ${flightCoordinate[i].speed} m/s</p>`))
+      .setPopup(new mapboxgl.Popup().setHTML(`<h4>Flight number : ${flightCoordinate[i].flightNumber}</h4><p>Current altitude : ${flightCoordinate[i].altitude} m</p><p>Speed : ${flightCoordinate[i].speed} m/s</p>`))
       .addTo(map.current);
 
 
@@ -49,8 +49,8 @@ const Map=({flights, countryFilter,flightNumberFilter})=> {
       const el = document.createElement("div");
       el.className="marker"
       el.style.backgroundImage= `url(https://d29fhpw069ctt2.cloudfront.net/icon/image/49621/preview.svg` ;
-      el.style.width="40px";
-      el.style.height="40px";
+      el.style.width='40px';
+      el.style.height='40px';
       el.style.backgroundSize = '100%';
       const marker = new mapboxgl.Marker(el)
     .setLngLat([flightCoordinate[i].longitude, flightCoordinate[i].latitude])
