@@ -1,6 +1,6 @@
 import "./Header.css"
 import React, {useState } from 'react';
-import Plane from "../images/plane.png";
+import Plane from "../images/airbus.png";
 import { BrowserRouter as Routes, Route, Link } from 'react-router-dom';
 
 const Header = () => {

@@ -79,7 +79,7 @@ const Map=({flights, countryFilter,flightNumberFilter})=> {
       
         </div>
     </div>
-    
+
   );
 }
 
