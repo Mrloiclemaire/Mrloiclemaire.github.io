@@ -1,4 +1,5 @@
 import React from 'react'
+import "./Filters.css"
 
 export default function Filter({flights, setCountryFilter, setFlightNumberFilter}) {
 
@@ -8,8 +9,9 @@ export default function Filter({flights, setCountryFilter, setFlightNumberFilter
 
 return (
     <div>
-        <form>
-        <select  name="countries" onChange={(e)=>{setCountryFilter(e.target.value); setFlightNumberFilter(null)}}>
+        <form className='flex-filter filter-country' >
+            <ul>Country of origin :</ul>
+        <select  name="countries" className='filter' onChange={(e)=>{setCountryFilter(e.target.value); setFlightNumberFilter(null)}}>
         {uniqueCountries.map((country, key)=>(<option key={key}>{country}</option>))}
         </select>
         </form>

@@ -2,6 +2,7 @@ import React from "react"
 import "./Contacts.css"
 import Linkedin from"../images/logo-linkedin.png"
 import Email from "../images/emailpicto.png"
+import Github from "../images/gitlogo.svg"
 
 export default function ContactCard(props){
 return (
@@ -16,6 +17,10 @@ return (
         <div className="contact-card__email">
             <img className="contact-card__email--picto" alt="email" src={Email}/>
             <p className="contact-card__email--text">{props.email}</p>
+        </div>
+        <div className="contact-card__email">
+            <img className="contact-card__linkedin--logo" alt="github" src={Github}/>
+            <p><a className="contact-card__linkedin--mail" href={props.github}> {props.github}</a></p>
         </div>
     </div>
 )
