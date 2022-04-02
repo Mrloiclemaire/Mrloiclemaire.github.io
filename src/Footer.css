@@ -2,13 +2,14 @@
     padding: 0rem 1rem 0rem;
     display: flex;
     justify-content: space-between;
-    height: 100px;
+    height: 300px;
     font-family: 'Inter', sans-serif;
     background-color: #00A4FF;
     color: white;
     align-items: center;
     background-image: url("./images/nuage.png");
-    background-size: 2000px 150px;
+    background-size: 2000px 300px;
+    overflow: hidden;
 }
 
 @media screen and (min-width: 480px) {
