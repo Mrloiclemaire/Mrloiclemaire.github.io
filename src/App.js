@@ -14,18 +14,22 @@ const App=()=> {
   const [countryFilter, setCountryFilter] = useState([])
   const [flightNumberFilter,setFlightNumberFilter] = useState("")
 
+  const getData= async (e) => {
+    const url = "https://opensky-network.org/api/states/all";
+
+    const {data} = await axios(url);
+    
+    setData(data.states);
+  }
 
   const [data, setData] = useState([]);
+
   useEffect(()=>{
 
-    const getData= async (e) => {
-      const url = "https://opensky-network.org/api/states/all";
-  
-      const {data} = await axios(url);
-      
-      setData(data.states);
-    };
+    
     getData();
+
+    const interval = setInterval(getData,3000)
     
   },[])
 
