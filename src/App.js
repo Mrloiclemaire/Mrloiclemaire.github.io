@@ -30,7 +30,7 @@ const App=()=> {
     
     getData();
 
-    // const interval = setInterval(getData,3000)
+    const interval = setInterval(getData,3000)
     
   },[])
 

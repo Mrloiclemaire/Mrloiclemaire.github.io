@@ -11,7 +11,7 @@ return (
     <div>
 
         <form className='flex-filter filter-country' >
-            <ul>Country of origin :</ul>
+            <ul>Select country of departure:</ul>
         <select  name="countries" className='filter' value={countryFilter} onChange={(e)=>{setCountryFilter(e.target.value); setFlightNumberFilter("")}}>
         {uniqueCountries.map((country, key)=>(<option key={key}>{country}</option>))}
         </select>

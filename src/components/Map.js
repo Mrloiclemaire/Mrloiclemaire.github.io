@@ -39,7 +39,7 @@ const Map=({flights, countryFilter,flightNumberFilter})=> {
       .setLngLat([flightCoordinate[i].longitude, flightCoordinate[i].latitude])
       .setRotation(flightCoordinate[i].rotation -45)
       .setRotationAlignment("viewport")
-      .setPopup(new mapboxgl.Popup().setHTML(`<h4>Flight number : ${flightCoordinate[i].flightNumber ? flightCoordinate[i].flightNumber : "Unknown" }</h4><p>Current altitude : ${flightCoordinate[i].altitude ? flightCoordinate[i].altitude +" m": "Unknown"} </p><p>Speed : ${Math.floor(flightCoordinate[i].speed*3.6) ? Math.floor(flightCoordinate[i].speed*3.6 )+" Km/h" : "Unknown"}</p>`))
+      .setPopup(new mapboxgl.Popup().setHTML(`<h4>Flight number : ${flightCoordinate[i].flightNumber ? flightCoordinate[i].flightNumber : "Unknown" }</h4><h4>Current altitude : ${flightCoordinate[i].altitude ? flightCoordinate[i].altitude +" m": "Unknown"} </h4><h4>Speed : ${Math.floor(flightCoordinate[i].speed*3.6) ? Math.floor(flightCoordinate[i].speed*3.6 )+" Km/h" : "Unknown"}</h4>`))
       .addTo(map.current)
 
 
@@ -56,7 +56,7 @@ const Map=({flights, countryFilter,flightNumberFilter})=> {
       const marker = new mapboxgl.Marker(el)
     .setLngLat([flightCoordinate[i].longitude, flightCoordinate[i].latitude])
     .setRotation(flightCoordinate[i].rotation - 45)
-    .setPopup(new mapboxgl.Popup().setHTML(`<h4>Flight number : ${flightCoordinate[i].flightNumber ? flightCoordinate[i].flightNumber : "Unknown" }</h4><p>Current altitude : ${flightCoordinate[i].altitude ? flightCoordinate[i].altitude +" m": "Unknown"} </p><p>Speed : ${Math.floor(flightCoordinate[i].speed*3.6) ? Math.floor(flightCoordinate[i].speed*3.6 )+" Km/h" : "Unknown"}</p>`))
+    .setPopup(new mapboxgl.Popup().setHTML(`<h4>Flight number : ${flightCoordinate[i].flightNumber ? flightCoordinate[i].flightNumber : "Unknown" }</h4><h4>Current altitude : ${flightCoordinate[i].altitude ? flightCoordinate[i].altitude +" m": "Unknown"} </h4><h4>Speed : ${Math.floor(flightCoordinate[i].speed*3.6) ? Math.floor(flightCoordinate[i].speed*3.6 )+" Km/h" : "Unknown"}</h4>`))
     .addTo(map.current);
 
     

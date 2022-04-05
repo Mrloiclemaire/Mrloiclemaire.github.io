@@ -5,6 +5,7 @@
     width : 100vw;
     margin-top:0px;
     vertical-align: center;
+    
 }
 
 ul {
@@ -15,20 +16,32 @@ ul {
 
 select, input {
     height: 22px;
-    margin-top: 20px;
-    border-radius: 10px;
+    border-radius: 5px;
     border: solid 1px darkblue;
+    background-color: #7bbde6;
+    
+    
+}
+
+input:focus{
+    background-color: #b9dbf0;
+}
+
+::placeholder{
+    color:black;
+
 }
 
 
 .filter-country {
     margin-bottom: 20px;
+    
 
 }
 
 .filter-number {
     text-align: center;
-    margin-top: 20px;
+    margin-top: inherit;
 }
 
 @media screen and (max-width: 576px) {

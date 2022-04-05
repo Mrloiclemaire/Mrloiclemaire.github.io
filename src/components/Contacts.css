@@ -1,5 +1,4 @@
 .flex {
-   
     display: flex;
     justify-content: space-around;
     align-items: center;
@@ -28,8 +27,8 @@ h3 {
 }
 
 .contact-card {
-border-radius: 8%;
-background-color: #00A4FF;
+border-radius: 4%;
+background-color: #00a6ffb9;
 font-family: 'Inter', sans-serif;
 width: 300px;
 colmaxor:white;
@@ -54,11 +53,17 @@ border-radius: 50%;
 
 .contact-card__linkedin {
 font-weight: 500;
-display: flex;
+display: inline;
 align-items: center;
 margin-left: 1.2rem;
 font-style: italic;
 font-size: 12px;
+}
+
+.contact-card__github--logo{
+    height:1.5rem;
+    margin-right: 0.5rem;
+
 }
 
 .contact-card__linkedin--logo {
@@ -69,9 +74,7 @@ margin-right: 0.5rem;
 
 .contact-card__linkedin--mail {
 text-decoration: none;
-color: white;
 margin-bottom:0rem;
-width: 40px;
 
 }
 
@@ -81,18 +84,26 @@ display: flex;
 font-weight: 500;
 align-items: center;
 margin-top:0;
-margin-left: 1rem;
+margin-left: 2rem;
 padding-right: 2rem;
 font-style: italic;
 font-size: 12px;
+justify-content: center;
+
 }
 
 .contact-card__email--picto {
 height: 1.5rem;
 margin-right: 0.3rem;
-margin-bottom: 0.9rem;
+
 }
 
-.contact-card__email--text{
-    margin-top: 0;
-    }
+
+.logo{
+
+    display:flex;
+    align-items: center;
+    justify-content: space-evenly;
+    margin:4%;
+    padding:4%;
+}

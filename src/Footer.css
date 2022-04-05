@@ -8,8 +8,7 @@
     background-color: #00A4FF;
     color: white;
     align-items: center;
-    background-image: url("./images/nuage.png");
-    background-size: 2000px 300px;
+    background-color: #41799B;
     overflow: hidden;
 }
 
@@ -55,6 +54,6 @@ align-items: center;
 .wcs>p {
     padding-right: 1rem;
 }
-.logo{
+/* .logo{
 height:30px;
-}
+} */

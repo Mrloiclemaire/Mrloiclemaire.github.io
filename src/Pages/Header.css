@@ -5,17 +5,14 @@
     margin-left: 10px;
     margin-top: 0px;
     float : left;
-  
+    padding-top:20px;
 }
-
-
-
 
 
 h1 {
     font-size: 50px;
     font-family: 'Saira', sans-serif;
-    margin-top: 30px;
+    padding-top:20px;
     text-align: center;
     background: #0E05FF;
     background: -webkit-linear-gradient(to top right, #0E05FF 0%, #000003 100%);
@@ -28,7 +25,7 @@ h1 {
 
 .cta--burger {
     position: absolute;
-    top: 10px;
+    top: 33px;
     right: 23px;
     height: 17px;
     width: 20px;
@@ -57,10 +54,10 @@ header {
 
 .menu--burger {
     height: 10vh;
-    width: 35%;
+    width: 20vh;
     background: linear-gradient(to right, black, #163BAF);
     color: whitesmoke;
-    opacity: 90%;
+    opacity: 100%;
     position: absolute;
     top: 0;
     right: 0;
@@ -69,9 +66,11 @@ header {
 
 .opened {
     transform: translateX(0%);
+    transition: all 0.3s ease-in-out;
 }
 .closed {
     transform: translateX(100%);
+    transition: all 0.3s ease-in-out;
 }
 
 .menu--burger ul li {
@@ -90,13 +89,12 @@ header {
 
 @media screen and (max-width: 576px) {
     .plane{
-       height: 50px;
-       width: 85px;
-       margin-top: 10px;
+    height: 50px;
+    width: 85px;
+    margin-top: 10px;
     }
 
     h1 {
         font-size: 35px;
-     
     }
 }

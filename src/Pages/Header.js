@@ -9,7 +9,7 @@ const Header = () => {
 
 
     const toggleMenu = ()=> {
-        menuStatus == "menu--burger closed" ? setMenuStatus("menu--burger opened") : setMenuStatus("menu--burger closed")
+        menuStatus === "menu--burger closed" ? setMenuStatus("menu--burger opened") : setMenuStatus("menu--burger closed")
         console.log(menuStatus);
     }
 
@@ -21,7 +21,7 @@ const Header = () => {
 
     <header>
         <img className="plane"src={Plane} alt="plane-logo"/>
-        <h1>THE Wild Flight Finder</h1>
+        <h1>Wild Flight Finder</h1>
         <div class="cta--burger" onClick={toggleMenu}>
             <div class="trait"></div>
             <div class="trait-small"></div>

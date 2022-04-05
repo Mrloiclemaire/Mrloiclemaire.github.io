@@ -8,7 +8,7 @@ export default function FlightNumberSearchBar({flightNumberFilter,setFlightNumbe
 
 
     <div className='flex-filter'>
-      <ul>Choose your flight :</ul>
+      <ul>Enter flight number :</ul>
         <input name="flightNumber" value={flightNumberFilter} className='filter filter-number'  onChange={(e)=>{setCountryFilter("");setFlightNumberFilter(e.target.value)}} 
         type="text" placeholder="Enter your flight number"></input>
         
