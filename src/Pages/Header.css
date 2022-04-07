@@ -82,7 +82,7 @@ header {
     margin-top: 0;
 }
 
-@media screen and (max-width: 576px) {
+@media screen and (max-width:   524px) {
     .plane{
     height: 70px;
     width: 85px;
@@ -90,8 +90,26 @@ header {
     }
 
     h1 {
+        right: 25%;
+        text-align: center;
         font-size: 35px;
-        margin-right: 50px;
+        margin-left: 25vw;
+        line-height: 35px;
+    }
+}
+
+@media screen and (max-width:   1024px) {
+    .plane{
+    height: 70px;
+    width: 85px;
+    margin-top: 10px;
+    }
+
+    h1 {
+        right: 30%;
+        text-align: center;
+        font-size: 35px;
+        margin-left: 25vw;
         line-height: 35px;
     }
 }

@@ -46,7 +46,7 @@ flex-direction: row;
     cursor: pointer;
     }
 
-@media screen and (min-width: 480px) {
+@media screen and (min-width: 1024px) {
     .wcs{
     display: flex;
     flex-direction: row;
