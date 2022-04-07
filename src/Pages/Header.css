@@ -14,13 +14,7 @@ h1 {
     font-family: 'Saira', sans-serif;
     padding-top:20px;
     text-align: center;
-    background: #0E05FF;
-    background: -webkit-linear-gradient(to top right, #0E05FF 0%, #000003 100%);
-    background: -moz-linear-gradient(to top right, #0E05FF 0%, #000003 100%);
-    background: linear-gradient(to top right, #0E05FF 0%, #000003 100%);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-}
+    color:white; }
 
 
 .cta--burger {
@@ -39,12 +33,12 @@ h1 {
 .cta--burger .trait {
     height: 2px;
     width: 100%;
-    background-color: #000;
+    background-color: white
 }
 .cta--burger .trait-small {
     height: 2px;
     width: 60%;
-    background-color: #000;
+    background-color: white;
 }
 
 header {
@@ -89,12 +83,14 @@ header {
 
 @media screen and (max-width: 576px) {
     .plane{
-    height: 50px;
+    height: 70px;
     width: 85px;
     margin-top: 10px;
     }
 
     h1 {
         font-size: 35px;
+        margin-right: 50px;
+        line-height: 35px;
     }
 }

@@ -8,13 +8,20 @@
     background-color: #00A4FF;
     color: white;
     align-items: center;
-    background-color: #41799B;
+    background-color: white;
     overflow: hidden;
+   
+}
+
+.wcs {
+    width: 90vw;
 }
 
 p{
     font-size: 20px;
     font-weight: 500;
+    color: black;
+    
 }
 
 @media screen and (min-width: 480px) {
@@ -43,6 +50,7 @@ flex-direction: row;
     .wcs{
     display: flex;
     flex-direction: row;
+    width: 40vw;
     }
 }
 .wcs{
@@ -54,6 +62,8 @@ align-items: center;
 .wcs>p {
     padding-right: 1rem;
 }
-/* .logo{
-height:30px;
-} */
+
+
+.logo {
+    width: 50%;
+}
