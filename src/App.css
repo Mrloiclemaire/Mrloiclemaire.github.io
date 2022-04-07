@@ -2,7 +2,7 @@
   
   text-align: center;
   background-image: url("./images/cloud.jpeg");
-  background-repeat: no-repeat;
+  /* background-repeat: no-repeat; */
   background-size:cover;
   
 }

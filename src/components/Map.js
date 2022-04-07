@@ -11,13 +11,17 @@ const Map=({flights, countryFilter,flightNumberFilter})=> {
   const mapContainer = useRef(null);
   const map = useRef(null);
 
+  
+
+  const [mapStyle , setMapStyle] = useState("satellite-streets-v11")
+  
   useEffect(()=>{ map.current = new mapboxgl.Map({
     container: mapContainer.current,
-    style: 'mapbox://styles/mapbox/satellite-streets-v11',
+    style: `mapbox://styles/mapbox/${mapStyle}`,
     center: [-4, 48],
     zoom: 1,
     renderWorldCopies: false,
-    })},[])
+    })},[mapStyle])
   
   useEffect(()=>{
     
@@ -68,15 +72,31 @@ const Map=({flights, countryFilter,flightNumberFilter})=> {
     
   
 
-},[flights, countryFilter, flightNumberFilter])
+},[flights, countryFilter, flightNumberFilter,mapStyle])
 
   
 
   return (
     <div> 
       <div className="map">
-        <div ref={mapContainer} className="map-container" />
-      
+      <div ref={mapContainer} className="map-container" />
+      <form className='formRadio'>
+        <input type="radio" id="Satellite" name="fav_language" value="satellite-streets-v11" onChange={(e)=>setMapStyle(e.target.value)}></input>
+        <label for="Satellite">Satellite map</label>
+        
+        <input type="radio" id="Traffic" name="fav_language" value="navigation-day-v1" onChange={(e)=>setMapStyle(e.target.value)}></input>
+        <label for="Traffic">Traffic map</label>
+
+        <input type="radio" id="Light" name="fav_language" value="light-v10" onChange={(e)=>setMapStyle(e.target.value)} ></input>
+        <label for="Light">Light mod map</label>
+
+        <input type="radio" id="Dark" name="fav_language" value="dark-v10" onChange={(e)=>setMapStyle(e.target.value)}></input>
+        <label for="Dark">Dark mod map</label>
+        
+      </form>
+
+        
+        
         </div>
     </div>
 
