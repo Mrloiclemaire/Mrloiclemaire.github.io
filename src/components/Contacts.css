@@ -18,17 +18,12 @@ h3 {
     margin-top: 100px;
     margin-bottom: 50px;
     font-size: 50px;
-    background: #8921CF;
-    background: -webkit-repeating-linear-gradient(to bottom right, #8921CF 0%, #36CACF 100%);
-    background: -moz-repeating-linear-gradient(to bottom right, #8921CF 0%, #36CACF 100%);
-    background: repeating-linear-gradient(to bottom right, #8921CF 0%, #36CACF 100%);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
+    color:white;
 }
 
 .contact-card {
 border-radius: 4%;
-background-color: #00a6ffb9;
+background-color: white;
 font-family: 'Inter', sans-serif;
 width: 300px;
 colmaxor:white;

@@ -13,7 +13,8 @@ h1 {
     font-size: 50px;
     font-family: 'Saira', sans-serif;
     padding-top:20px;
-    text-align: center;
+    position: absolute;
+    right:33%;
     color:white; }
 
 

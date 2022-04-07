@@ -1,11 +1,19 @@
 .App {
   
   text-align: center;
-  background-image: url("./images/cloud.jpeg");
+  background-image: url("./images/clouds2.jpg");
   background-repeat: no-repeat;
   background-size:cover;
+  background-position: center;
+  background-position-y: top;
+  
   
 }
+
+
+::-webkit-scrollbar {
+  display: none;
+  }
 
 .App-logo {
   height: 40vmin;
