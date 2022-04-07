@@ -5,20 +5,20 @@
     width : 100vw;
     margin-top:0px;
     vertical-align: center;
-    
 }
 
 ul {
     margin-right: 10px;
     font-family: 'Saira', sans-serif;
     font-size: 18px;
+    color: white;
 }
 
 select, input {
     height: 22px;
     border-radius: 5px;
     border: solid 1px darkblue;
-    background-color: #7bbde6;
+    background-color: white
     
     
 }
@@ -47,15 +47,19 @@ input:focus{
 @media screen and (max-width: 576px) {
     .flex-filter {
     
-        display: flex;
-        justify-content: center;
+        display: inline-block;
         width : 98vw;
         margin-top:20px;
         vertical-align: center;
     }
     ul {
         margin-right: 10px;
+        margin-bottom: 5px;
         font-family: 'Saira', sans-serif;
         font-size: 15px;
+    }
+
+    .filter-number {
+        margin-top: 0px;
     }
 }
