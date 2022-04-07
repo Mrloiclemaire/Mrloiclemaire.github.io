@@ -1,20 +1,25 @@
 import "./Header.css"
 import React, {useState } from 'react';
 import Plane from "../images/airbus.png";
+import Burger from "../images/burger1.png";
+import Cross from "../images/crossmenu.png";
 import { BrowserRouter as Routes, Route, Link } from 'react-router-dom';
 
 const Header = () => {
 
     const [menuStatus,setMenuStatus] = useState("menu--burger closed")
+    const [burgerType,setBurger] = useState("cta--burger burger")
 
 
     const toggleMenu = ()=> {
         menuStatus === "menu--burger closed" ? setMenuStatus("menu--burger opened") : setMenuStatus("menu--burger closed")
-        console.log(menuStatus);
+        burgerType === "cta--burger burger" ? setBurger("cta--burger cross") : setBurger("cta--burger burger")
+        console.log(burgerType);
     }
 
     const closeMenu = () => {
         setMenuStatus("menu--burger closed")
+        setBurger("cta--burger burger")
     }
 
     return(
@@ -22,11 +27,9 @@ const Header = () => {
     <header>
         <img className="plane"src={Plane} alt="plane-logo"/>
         <h1>Wild Flight Finder</h1>
-        <div class="cta--burger" onClick={toggleMenu}>
-            <div class="trait"></div>
-            <div class="trait-small"></div>
-            <div class="trait"></div>
-        </div>
+        
+        <img className={burgerType} src={burgerType==="cta--burger burger" ? Burger : Cross} alt="burger-menu" onClick={toggleMenu}/>
+        
         <div className={menuStatus}>
             <ul>
                 <Link to="/" style={{ textDecoration: 'none' }} onClick={closeMenu}><li>Home</li></Link>
