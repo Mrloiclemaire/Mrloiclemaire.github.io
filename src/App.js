@@ -30,15 +30,25 @@ const App=()=> {
     
     getData();
 
-    const interval = setInterval(getData,3000)
+    const interval = setInterval(getData,2000)
     
   },[])
+
+
+    // GEOLOCATION FUNCTION
+    const [lat, setLat] = useState(null);
+    const [lng, setLng] = useState(null);
+    const [zoom, setZoom] = useState(1)
+    
+
+    
+
 
   return (
     <div className="App">
       <Header/>
       <Routes>
-            <Route path="/" element={<HomePage flights={data} setCountryFilter={setCountryFilter} countryFilter={countryFilter} setFlightNumberFilter={setFlightNumberFilter} flightNumberFilter={flightNumberFilter} />} />
+            <Route path="/" element={<HomePage flights={data} setCountryFilter={setCountryFilter} countryFilter={countryFilter} setFlightNumberFilter={setFlightNumberFilter} flightNumberFilter={flightNumberFilter} setLat={setLat} setLng={setLng} lat={lat} lng={lng} zoom={zoom} setZoom={setZoom} />} />
             <Route path="/contact" element={<Contact/>}/>
       </Routes>  
       <Footer/>

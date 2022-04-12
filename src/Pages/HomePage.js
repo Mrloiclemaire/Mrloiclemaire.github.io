@@ -4,14 +4,14 @@ import FlightNumberSearchBar from '../components/FlightNumberSearchBar';
 
 
 
-const HomePage = ({flights, setCountryFilter, countryFilter, setFlightNumberFilter,flightNumberFilter}) => {
+const HomePage = ({flights, setCountryFilter, countryFilter, setFlightNumberFilter,flightNumberFilter,setLat, setLng, lat, lng ,zoom, setZoom}) => {
 
 
     return(
     <>
         <FlightNumberSearchBar setFlightNumberFilter={setFlightNumberFilter} setCountryFilter={setCountryFilter} flightNumberFilter={flightNumberFilter} />
         <CountryFilter flights={flights} setCountryFilter={setCountryFilter} setFlightNumberFilter={setFlightNumberFilter} countryFilter={countryFilter}/>
-        <Map flights={flights} countryFilter={countryFilter} flightNumberFilter={flightNumberFilter} />
+        <Map flights={flights} countryFilter={countryFilter} flightNumberFilter={flightNumberFilter} setLat={setLat} setLng={setLng} lat={lat} lng={lng} zoom={zoom} setZoom={setZoom}/>
     </>
     )
 }
