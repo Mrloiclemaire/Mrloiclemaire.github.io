@@ -9,12 +9,13 @@
 }
 
 
-h1 {
+.title{
     font-size: 50px;
     font-family: 'Saira', sans-serif;
     padding-top:20px;
-    position: absolute;
-    right:33%;
+    align-items: center;
+    /* position: absolute; */
+    /* right:33%; */
     color:white; }
 
 
@@ -53,9 +54,14 @@ h1 {
 }
 
 header {
-    height: 100px;
+    /* height: 100px; */
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
 }
 
+.contentheader{
+display: flex;
+}
 
 .menu--burger {
     height: 10vh;
@@ -100,11 +106,11 @@ header {
     margin-top: 10px;
     }
 
-    h1 {
-        right: 25%;
+    .title {
+        /* right: 25%; */
         text-align: center;
         font-size: 35px;
-        margin-left: 25vw;
+        /* margin-left: 25vw; */
         line-height: 35px;
     }
 }
@@ -116,11 +122,11 @@ header {
     margin-top: 10px;
     }
 
-    h1 {
-        right: 30%;
+    .title {
+        /* right: 30%; */
         text-align: center;
         font-size: 35px;
-        margin-left: 25vw;
+        /* margin-left: 25vw; */
         line-height: 35px;
     }
 }

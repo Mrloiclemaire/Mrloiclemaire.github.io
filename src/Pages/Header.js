@@ -26,10 +26,10 @@ const Header = () => {
 
     <header>
         <img className="plane"src={Plane} alt="plane-logo"/>
-        <h1>Wild Flight Finder</h1>
-        
+        <h1 className="title">Wild Flight Finder</h1>
+
         <img className={burgerType} src={burgerType==="cta--burger burger" ? Burger : Cross} alt="burger-menu" onClick={toggleMenu}/>
-        
+
         <div className={menuStatus}>
             <ul>
                 <Link to="/" style={{ textDecoration: 'none' }} onClick={closeMenu}><li>Home</li></Link>
