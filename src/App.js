@@ -4,10 +4,9 @@ import Header from './Pages/Header';
 import HomePage from './Pages/HomePage';
 import axios from "axios";
 import Contact from "./components/Contact";
-import Loic from "./images/loic.jpeg";
 import Footer from"./components/Footer";
 import { Route, Routes } from "react-router-dom";
-import Map from "./components/Map.js"
+
 
 
 const App=()=> {

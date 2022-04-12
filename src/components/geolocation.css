@@ -8,8 +8,12 @@
     border-radius: 3px;
     font: bold 13px/20px 'Helvetica Neue', Arial, Helvetica, sans-serif;
     top: 200px;
-    padding: 10px;
+    padding: 1px;
     border: 0;
+    height: 50px;
+    width: 50px;
+    
+    
 }
 
 @media screen and (max-width: 576px) {
@@ -20,6 +24,11 @@
 .geolocationButton:hover{
     background-color: rgba(115, 185, 255, 0.815);
     transition: 0.5s ease-in-out;
+}
+
+img{
+    max-width: 100%;
+    height: auto;
 }
 
 
