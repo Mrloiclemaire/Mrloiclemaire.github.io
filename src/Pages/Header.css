@@ -54,7 +54,6 @@
 }
 
 header {
-    /* height: 100px; */
     display: grid;
     grid-template-columns: repeat(3, 1fr);
 }
@@ -107,10 +106,8 @@ display: flex;
     }
 
     .title {
-        /* right: 25%; */
         text-align: center;
         font-size: 35px;
-        /* margin-left: 25vw; */
         line-height: 35px;
     }
 }
@@ -123,10 +120,8 @@ display: flex;
     }
 
     .title {
-        /* right: 30%; */
         text-align: center;
         font-size: 35px;
-        /* margin-left: 25vw; */
         line-height: 35px;
     }
 }

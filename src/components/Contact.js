@@ -33,7 +33,7 @@ return (
             name="Agathe Geniteau"
             linkedinurl="https://www.linkedin.com/in/agathe-geniteau-1a4a6281/"
             linkedinname="linkedin/agathegeniteau"
-            email="agathe@gmail.com"
+            email="agathe.geniteau@gmail.com"
             github="https://github.com/AgatheBo"
         />
     </div>
