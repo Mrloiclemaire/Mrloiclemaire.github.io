@@ -7,7 +7,7 @@ import Geolocation from './Geolocation';
 
 
 
-const Map=({flights, countryFilter,flightNumberFilter,setLat,setLng, lat, lng, zoom, setZoom})=> {
+const Map=({flights, countryFilter,flightNumberFilter,setLat,setLng, lat, lng,zoom, setZoom})=> {
 
 	mapboxgl.accessToken = 'pk.eyJ1IjoiYWxleGtlcmJsYSIsImEiOiJja3kzYWlxbmYwMDg1MnhvbjV6MHBiOHplIn0.k3LrOobdBO8e_hnBQq6Z7Q';
   const mapContainer = useRef(null);
@@ -19,7 +19,7 @@ const Map=({flights, countryFilter,flightNumberFilter,setLat,setLng, lat, lng, z
     container: mapContainer.current,
     style: `mapbox://styles/mapbox/${mapStyle}`,
     center: {lng:lng, lat:lat},
-    zoom: 1,
+    zoom: `${zoom}`,
     renderWorldCopies: false,
     })},[mapStyle, lat , lng, zoom])
   
@@ -51,11 +51,9 @@ const Map=({flights, countryFilter,flightNumberFilter,setLat,setLng, lat, lng, z
     } else if ( !!flightNumberFilter && flightCoordinate[i].flightNumber === flightNumberFilter){
       const el = document.createElement("div");
       el.className="marker"
-
       el.style.backgroundImage= `url(https://d29fhpw069ctt2.cloudfront.net/icon/image/49621/preview.svg)` ;
       el.style.width="30px";
       el.style.height="30px";
-
       el.style.backgroundSize = '100%';
       const marker = new mapboxgl.Marker(el)
     .setLngLat([flightCoordinate[i].longitude, flightCoordinate[i].latitude])
@@ -80,17 +78,20 @@ useEffect(()=>{
     return null 
   }
     else{
-  const el = document.createElement("div");
-    el.className="markerGeolocation"
-    el.style.backgroundImage= `url(https://cdn-icons.flaticon.com/png/512/2098/premium/2098567.png?token=exp=1649779778~hmac=aabb9d4c06c7419f2f7f66ad7f21586a)` ;
-    el.style.width="30px";
-    el.style.height="30px";
-    el.style.backgroundSize = '100%';
-    const marker = new mapboxgl.Marker(el)
-  .setLngLat([lng,lat])
-  .addTo(map.current)
+      setTimeout(()=>{
+      const el = document.createElement("div");
+      el.className="markerGeolocation"
+      el.style.backgroundImage= `url(https://cdn-icons.flaticon.com/png/512/2098/premium/2098567.png?token=exp=1649779778~hmac=aabb9d4c06c7419f2f7f66ad7f21586a)` ;
+      el.style.width="30px";
+      el.style.height="30px";
+      el.style.backgroundSize = '100%';
+      const marker = new mapboxgl.Marker(el)
+    .setLngLat([lng,lat])
+    .addTo(map.current)}
+    ,1500)
+  
 }
-},[lat,lng,map])
+},[lat,lng,zoom])
 
 
 const [arrowStatus,setArrowStatus] = useState("arrow down")
