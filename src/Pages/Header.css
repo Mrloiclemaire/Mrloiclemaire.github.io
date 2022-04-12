@@ -14,7 +14,7 @@ h1 {
     font-family: 'Saira', sans-serif;
     padding-top:20px;
     position: absolute;
-    right:33%;
+    right:39vw;
     color:white; }
 
 
@@ -101,7 +101,7 @@ header {
     }
 
     h1 {
-        right: 25%;
+
         text-align: center;
         font-size: 35px;
         margin-left: 25vw;
@@ -117,7 +117,7 @@ header {
     }
 
     h1 {
-        right: 30%;
+        right: 24vw;
         text-align: center;
         font-size: 35px;
         margin-left: 25vw;
