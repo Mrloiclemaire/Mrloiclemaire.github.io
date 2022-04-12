@@ -12,7 +12,7 @@ export default function Geolocation({setLat,setLng,setZoom}) {
         navigator.geolocation.getCurrentPosition((position) => {
             setLat(position.coords.latitude);
             setLng(position.coords.longitude);
-            setZoom(13)
+            setZoom(11)
         }, () => {
             alert('Unable to retrieve your location');
         });
