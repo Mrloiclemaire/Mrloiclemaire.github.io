@@ -12,7 +12,7 @@ export default function Geolocation({setLat,setLng,setZoom}) {
         navigator.geolocation.getCurrentPosition((position) => {
             setLat(position.coords.latitude);
             setLng(position.coords.longitude);
-            setZoom(13)
+            setZoom(11)
         }, () => {
             alert('Unable to retrieve your location');
         });
@@ -20,8 +20,8 @@ export default function Geolocation({setLat,setLng,setZoom}) {
     }
 
 return (
-    <div className="geolocation">
-    <button className='geolocationButton' onClick={()=>getLocation()}>Get Location</button>
-    </div>
+    <>
+    <button className='geolocationButton' onClick={()=>getLocation()}><img src="https://cdn-icons.flaticon.com/png/512/4284/premium/4284108.png?token=exp=1649787464~hmac=c03952ea7ecdd2cb33bc8e769fb3d64f" alt="buttonGeolocate"></img></button>
+    </>
 )
 }
