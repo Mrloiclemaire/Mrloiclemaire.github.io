@@ -20,8 +20,8 @@ export default function Geolocation({setLat,setLng,setZoom}) {
     }
 
 return (
-    <div className="geolocation">
+    <>
     <button className='geolocationButton' onClick={()=>getLocation()}>Get Location</button>
-    </div>
+    </>
 )
 }
