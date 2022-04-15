@@ -88,7 +88,7 @@ useEffect(()=>{
       const marker = new mapboxgl.Marker(el)
     .setLngLat([lng,lat])
     .addTo(map.current)}
-    ,1500)
+    ,2000)
   
 }
 },[lat,lng,zoom])

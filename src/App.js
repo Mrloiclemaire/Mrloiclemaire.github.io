@@ -40,8 +40,6 @@ const App=()=> {
     const [zoom, setZoom] = useState(1)
     
 
-    
-
 
   return (
     <div className="App">
