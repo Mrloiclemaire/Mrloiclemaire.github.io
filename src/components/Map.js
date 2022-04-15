@@ -71,7 +71,7 @@ const Map=({flights, countryFilter,flightNumberFilter,setLat,setLng, lat, lng,zo
 },[flights, countryFilter, flightNumberFilter,mapStyle])
 
 
-console.log(lat)
+
 
 useEffect(()=>{
   if (lat===null && lng ===null){

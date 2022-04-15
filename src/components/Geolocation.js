@@ -22,7 +22,7 @@ export default function Geolocation({setLat,setLng,setZoom}) {
 
 return (
     <>
-    <button className='geolocationButton' onClick={()=>getLocation()}><img src={logo} alt="buttonGeolocate"></img></button>
+    <button className='geolocationButton' onClick={()=>getLocation()}><img className="logoPointer"src={logo} alt="buttonGeolocate"></img></button>
     </>
 )
 }
