@@ -40,12 +40,15 @@ const App=()=> {
     const [zoom, setZoom] = useState(1)
     
 
+    // COUNT FUNCTION
+    
+    const [count,setCount] = useState(null)
 
   return (
     <div className="App">
       <Header/>
       <Routes>
-            <Route path="/" element={<HomePage flights={data} setCountryFilter={setCountryFilter} countryFilter={countryFilter} setFlightNumberFilter={setFlightNumberFilter} flightNumberFilter={flightNumberFilter} setLat={setLat} setLng={setLng} lat={lat} lng={lng} zoom={zoom} setZoom={setZoom} />} />
+            <Route path="/" element={<HomePage flights={data} setCountryFilter={setCountryFilter} countryFilter={countryFilter} setFlightNumberFilter={setFlightNumberFilter} flightNumberFilter={flightNumberFilter} setLat={setLat} setLng={setLng} lat={lat} lng={lng} zoom={zoom} setZoom={setZoom} count={count} setCount={setCount} />} />
             <Route path="/contact" element={<Contact/>}/>
       </Routes>  
       <Footer/>

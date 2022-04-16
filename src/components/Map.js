@@ -3,11 +3,12 @@ import mapboxgl, { LngLatBounds } from 'mapbox-gl';
 import React, { useRef, useEffect, useState } from 'react';
 import $ from 'jquery';
 import Geolocation from './Geolocation';
+import Count from "./Count";
 
 
 
 
-const Map=({flights, countryFilter,flightNumberFilter,setLat,setLng, lat, lng,zoom, setZoom})=> {
+const Map=({flights, countryFilter,flightNumberFilter,setLat,setLng, lat, lng,zoom, setZoom,count,setCount})=> {
 
 	mapboxgl.accessToken = 'pk.eyJ1IjoiYWxleGtlcmJsYSIsImEiOiJja3kzYWlxbmYwMDg1MnhvbjV6MHBiOHplIn0.k3LrOobdBO8e_hnBQq6Z7Q';
   const mapContainer = useRef(null);
@@ -34,6 +35,7 @@ const Map=({flights, countryFilter,flightNumberFilter,setLat,setLng, lat, lng,zo
 
   for (let i= 0; i < flightCoordinate.length; i++) {
     if(!!countryFilter && flightCoordinate[i].departure === countryFilter ){
+      
       const el = document.createElement("div");
       el.className="marker"
       el.style.backgroundImage= `url(https://d29fhpw069ctt2.cloudfront.net/icon/image/49621/preview.svg)` ;
@@ -45,7 +47,8 @@ const Map=({flights, countryFilter,flightNumberFilter,setLat,setLng, lat, lng,zo
       .setRotation(flightCoordinate[i].rotation -45)
       .setRotationAlignment("viewport")
       .setPopup(new mapboxgl.Popup().setHTML(`<h4>Flight number : ${flightCoordinate[i].flightNumber ? flightCoordinate[i].flightNumber : "Unknown" }</h4><h4>Current altitude : ${flightCoordinate[i].altitude ? flightCoordinate[i].altitude +" m": "Unknown"} </h4><h4>Speed : ${Math.floor(flightCoordinate[i].speed*3.6) ? Math.floor(flightCoordinate[i].speed*3.6 )+" Km/h" : "Unknown"}</h4>`))
-      .addTo(map.current)
+      .addTo(map.current);
+      
 
 
 
@@ -62,8 +65,10 @@ const Map=({flights, countryFilter,flightNumberFilter,setLat,setLng, lat, lng,zo
     .setPopup(new mapboxgl.Popup().setHTML(`<h4>Flight number : ${flightCoordinate[i].flightNumber ? flightCoordinate[i].flightNumber : "Unknown" }</h4><h4>Current altitude : ${flightCoordinate[i].altitude ? flightCoordinate[i].altitude +" m": "Unknown"} </h4><h4>Speed : ${Math.floor(flightCoordinate[i].speed*3.6) ? Math.floor(flightCoordinate[i].speed*3.6 )+" Km/h" : "Unknown"}</h4>`))
     .addTo(map.current);
     
+    
     }}
 
+    
     return function cleanup(){
       $( ".marker" ).remove();
     }
@@ -71,8 +76,7 @@ const Map=({flights, countryFilter,flightNumberFilter,setLat,setLng, lat, lng,zo
 
 },[flights, countryFilter, flightNumberFilter,mapStyle])
 
-
-
+setCount($(".marker").length)
 
 useEffect(()=>{
   if (lat===null && lng ===null){
@@ -133,8 +137,10 @@ const toggleArrow = () =>{
         <label for="Dark">Dark mode</label>
         </div>
       </form>
+
       
       <Geolocation setLat={setLat} setLng={setLng} setZoom={setZoom}/>
+      <Count count={count} />
       
         
         </div>
