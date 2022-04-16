@@ -21,6 +21,7 @@ const Map=({flights, countryFilter,flightNumberFilter,setLat,setLng, lat, lng,zo
     center: {lng:lng, lat:lat},
     zoom: `${zoom}`,
     renderWorldCopies: false,
+    logoPosition:"top-right",
     })},[mapStyle, lat , lng, zoom])
   
   useEffect(()=>{
