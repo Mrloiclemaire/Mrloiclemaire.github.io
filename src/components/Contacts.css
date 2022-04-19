@@ -1,0 +1,108 @@
+.flex {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding-bottom: 100px;
+}
+
+@media screen and (max-width: 1024px) {
+    .flex{
+        padding: 0rem 8rem 0rem;
+        font-size: 16px;
+        flex-direction: column-reverse;
+        align-items: center;
+    }
+}
+
+h3 {
+    margin-top: 100px;
+    margin-bottom: 50px;
+    font-size: 50px;
+    color:white;
+}
+
+.contact-card {
+border-radius: 4%;
+background-color: white;
+font-family: 'Inter', sans-serif;
+width: 300px;
+colmaxor:white;
+box-sizing: border-box;
+margin: 10px;
+}
+
+
+.contact-card__name{
+font-weight: 700;
+font-size:1.5rem;
+margin-bottom:1rem;
+}
+
+.contact-card__photo {
+    margin-top: 10px;
+max-height: 10rem;
+max-width: 10rem;
+border-radius: 50%;
+}
+
+
+.contact-card__linkedin {
+font-weight: 500;
+display: inline;
+align-items: center;
+margin-left: 1.2rem;
+font-style: italic;
+font-size: 12px;
+}
+
+.contact-card__github--logo{
+    height:1.5rem;
+    margin-right: 0.5rem;
+
+}
+
+.contact-card__linkedin--logo {
+height:1.5rem;
+margin-right: 0.5rem;
+}
+
+
+.contact-card__linkedin--mail {
+text-decoration: none;
+margin-bottom:0rem;
+
+}
+
+
+.contact-card__email{
+display: flex;
+font-weight: 500;
+align-items: center;
+margin-top:0;
+margin-left: 2rem;
+padding-right: 2rem;
+font-style: italic;
+font-size: 12px;
+justify-content: center;
+
+}
+
+.contact-card__email--picto {
+height: 1.5rem;
+margin-right: 0.3rem;
+
+}
+
+.contact-card__email--text{
+
+    font-size: 1.1rem;
+}
+
+.logo{
+
+    display:flex;
+    align-items: center;
+    justify-content: space-evenly;
+    margin:auto;
+    padding:4%;
+}
