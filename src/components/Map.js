@@ -1,5 +1,5 @@
 import './Map.css'
-import mapboxgl, { LngLatBounds } from 'mapbox-gl';
+import mapboxgl from 'mapbox-gl';
 import React, { useRef, useEffect, useState } from 'react';
 import $ from 'jquery';
 import Geolocation from './Geolocation';
@@ -16,7 +16,8 @@ const Map=({flights, countryFilter,flightNumberFilter,setLat,setLng, lat, lng,zo
   
   const [mapStyle , setMapStyle] = useState("satellite-streets-v11")
   
-  useEffect(()=>{ map.current = new mapboxgl.Map({
+  useEffect(()=>{ 
+    map.current = new mapboxgl.Map({
     container: mapContainer.current,
     style: `mapbox://styles/mapbox/${mapStyle}`,
     center: {lng:lng, lat:lat},

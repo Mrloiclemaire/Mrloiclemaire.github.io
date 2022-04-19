@@ -3,7 +3,7 @@ import React, {useState } from 'react';
 import Plane from "../images/airbus.png";
 import Burger from "../images/burger1.png";
 import Cross from "../images/crossmenu.png";
-import { BrowserRouter as Routes, Route, Link } from 'react-router-dom';
+import { BrowserRouter as Link } from 'react-router-dom';
 
 const Header = () => {
 
@@ -32,7 +32,7 @@ const Header = () => {
 
         <div className={menuStatus}>
             <ul>
-                <Link to="/" style={{ textDecoration: 'none' }} onClick={closeMenu}><li>Home</li></Link>
+                <Link to="/WildFlightFinder/" style={{ textDecoration: 'none' }} onClick={closeMenu}><li>Home</li></Link>
                 <Link to="/contact" style={{ textDecoration: 'none' }} onClick={closeMenu}><li>Contact</li></Link>
             </ul>
         </div>
