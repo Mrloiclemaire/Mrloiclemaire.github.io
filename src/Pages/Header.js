@@ -3,7 +3,7 @@ import React, {useState } from 'react';
 import Plane from "../images/airbus.png";
 import Burger from "../images/burger1.png";
 import Cross from "../images/crossmenu.png";
-import { BrowserRouter as Link } from 'react-router-dom';
+import { BrowserRouter as Routes,Route,Link } from 'react-router-dom';
 
 const Header = () => {
 
