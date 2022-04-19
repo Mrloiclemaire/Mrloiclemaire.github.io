@@ -17,11 +17,11 @@ return (
         </div>
         <div className="logo">
         <div className="contact-card__linkedin">
-            <a href={props.linkedinurl} target="_blank"><img className="contact-card__linkedin--logo"  alt="linkedin" src={Linkedin}/></a>
+            <a href={props.linkedinurl} target="_blank" rel="noopener"><img className="contact-card__linkedin--logo"  alt="linkedin" src={Linkedin}/></a>
             {/* <p><a className="contact-card__linkedin--mail" href={props.linkedinurl}> {props.linkedinname}</a></p> */}
         </div>
         <div className="contact-card__github">
-            <a href={props.github} target="_blank"> <img className="contact-card__github--logo" alt="github" src={Github}/></a>
+            <a href={props.github} target="_blank" rel="noopener"> <img className="contact-card__github--logo" alt="github" src={Github}/></a>
             {/* <p><a className="contact-card__linkedin--mail" href={props.github}> {props.github}</a></p> */}
         </div>
         </div>
