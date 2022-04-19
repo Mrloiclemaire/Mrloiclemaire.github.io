@@ -1,6 +1,6 @@
 {
   "files": {
-    "main.css": "/WildFlightFinder/static/css/main.09fc5d1a.css",
+    "main.css": "/WildFlightFinder/static/css/main.90253543.css",
     "main.js": "/WildFlightFinder/static/js/main.beb7a56e.js",
     "static/media/876002.jpg": "/WildFlightFinder/static/media/876002.ab255749223ef1cbdef5.jpg",
     "static/media/airbus.png": "/WildFlightFinder/static/media/airbus.0231baf60cceac8e5e8a.png",
@@ -11,11 +11,11 @@
     "static/media/agathephoto.png": "/WildFlightFinder/static/media/agathephoto.f5b0349fe2afd75528b7.png",
     "index.html": "/WildFlightFinder/index.html",
     "static/media/gitlogo.svg": "/WildFlightFinder/static/media/gitlogo.3ea7d9bcdf7bb4836e2175ac2a12c306.svg",
-    "main.09fc5d1a.css.map": "/WildFlightFinder/static/css/main.09fc5d1a.css.map",
+    "main.90253543.css.map": "/WildFlightFinder/static/css/main.90253543.css.map",
     "main.beb7a56e.js.map": "/WildFlightFinder/static/js/main.beb7a56e.js.map"
   },
   "entrypoints": [
-    "static/css/main.09fc5d1a.css",
+    "static/css/main.90253543.css",
     "static/js/main.beb7a56e.js"
   ]
 }
