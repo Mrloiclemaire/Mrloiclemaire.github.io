@@ -14,7 +14,7 @@ const Header = () => {
     const toggleMenu = ()=> {
         menuStatus === "menu--burger closed" ? setMenuStatus("menu--burger opened") : setMenuStatus("menu--burger closed")
         burgerType === "cta--burger burger" ? setBurger("cta--burger cross") : setBurger("cta--burger burger")
-        console.log(burgerType);
+        
     }
 
     const closeMenu = () => {
