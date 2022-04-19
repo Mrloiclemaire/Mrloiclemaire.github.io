@@ -1,5 +1,5 @@
 import './Map.css'
-import mapboxgl, { LngLatBounds } from '!mapbox-gl';
+import mapboxgl, { LngLatBounds } from 'mapbox-gl';
 import React, { useRef, useEffect, useState } from 'react';
 import $ from 'jquery';
 import Geolocation from './Geolocation';
