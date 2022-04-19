@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "//mrloiclemaire.github.io/WildFlightFinder/static/css/main.58e7d7aa.css",
-    "main.js": "//mrloiclemaire.github.io/WildFlightFinder/static/js/main.2539857d.js",
+    "main.js": "//mrloiclemaire.github.io/WildFlightFinder/static/js/main.ab5aef62.js",
     "static/media/876002.jpg": "//mrloiclemaire.github.io/WildFlightFinder/static/media/876002.ab255749223ef1cbdef5.jpg",
     "static/media/airbus.png": "//mrloiclemaire.github.io/WildFlightFinder/static/media/airbus.0231baf60cceac8e5e8a.png",
     "static/media/loic.jpeg": "//mrloiclemaire.github.io/WildFlightFinder/static/media/loic.d02fddeea2b171495d05.jpeg",
@@ -12,10 +12,10 @@
     "index.html": "//mrloiclemaire.github.io/WildFlightFinder/index.html",
     "static/media/gitlogo.svg": "//mrloiclemaire.github.io/WildFlightFinder/static/media/gitlogo.3ea7d9bcdf7bb4836e2175ac2a12c306.svg",
     "main.58e7d7aa.css.map": "//mrloiclemaire.github.io/WildFlightFinder/static/css/main.58e7d7aa.css.map",
-    "main.2539857d.js.map": "//mrloiclemaire.github.io/WildFlightFinder/static/js/main.2539857d.js.map"
+    "main.ab5aef62.js.map": "//mrloiclemaire.github.io/WildFlightFinder/static/js/main.ab5aef62.js.map"
   },
   "entrypoints": [
     "static/css/main.58e7d7aa.css",
-    "static/js/main.2539857d.js"
+    "static/js/main.ab5aef62.js"
   ]
 }
