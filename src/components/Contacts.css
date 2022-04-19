@@ -1,25 +1,31 @@
 .flex {
     display: flex;
     justify-content: space-around;
+    align-items: center;
+    padding-bottom: 100px;
+}
+
+@media screen and (max-width: 1024px) {
+    .flex{
+        padding: 0rem 8rem 0rem;
+        font-size: 16px;
+        flex-direction: column-reverse;
+        align-items: center;
+    }
 }
 
 h3 {
     margin-top: 100px;
     margin-bottom: 50px;
     font-size: 50px;
-    background: #8921CF;
-    background: -webkit-repeating-linear-gradient(to bottom right, #8921CF 0%, #36CACF 100%);
-    background: -moz-repeating-linear-gradient(to bottom right, #8921CF 0%, #36CACF 100%);
-    background: repeating-linear-gradient(to bottom right, #8921CF 0%, #36CACF 100%);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
+    color:white;
 }
 
 .contact-card {
-border-radius: 8%;
-background-color: #00A4FF;
+border-radius: 4%;
+background-color: white;
 font-family: 'Inter', sans-serif;
-width: 18%;
+width: 300px;
 colmaxor:white;
 box-sizing: border-box;
 margin: 10px;
@@ -33,6 +39,7 @@ margin-bottom:1rem;
 }
 
 .contact-card__photo {
+    margin-top: 10px;
 max-height: 10rem;
 max-width: 10rem;
 border-radius: 50%;
@@ -41,11 +48,17 @@ border-radius: 50%;
 
 .contact-card__linkedin {
 font-weight: 500;
-display: flex;
+display: inline;
 align-items: center;
 margin-left: 1.2rem;
 font-style: italic;
 font-size: 12px;
+}
+
+.contact-card__github--logo{
+    height:1.5rem;
+    margin-right: 0.5rem;
+
 }
 
 .contact-card__linkedin--logo {
@@ -56,7 +69,6 @@ margin-right: 0.5rem;
 
 .contact-card__linkedin--mail {
 text-decoration: none;
-color: white;
 margin-bottom:0rem;
 
 }
@@ -67,18 +79,30 @@ display: flex;
 font-weight: 500;
 align-items: center;
 margin-top:0;
-margin-left: 1rem;
+margin-left: 2rem;
 padding-right: 2rem;
 font-style: italic;
 font-size: 12px;
+justify-content: center;
+
 }
 
 .contact-card__email--picto {
 height: 1.5rem;
 margin-right: 0.3rem;
-margin-bottom: 0.9rem;
+
 }
 
 .contact-card__email--text{
-    margin-top: 0;
-    }
+
+    font-size: 1.1rem;
+}
+
+.logo{
+
+    display:flex;
+    align-items: center;
+    justify-content: space-evenly;
+    margin:auto;
+    padding:4%;
+}

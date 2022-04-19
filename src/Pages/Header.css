@@ -1,31 +1,24 @@
 .plane {
 
-    height: 15vh;
-    margin-left: 5px;
+    height: 120px;
+    width: 200px;
+    margin-left: 10px;
     margin-top: 0px;
     float : left;
-  
+    padding-top:20px;
 }
 
-h1 {
+
+.title{
     font-size: 50px;
-    margin-top: 20px;
-    text-align: center;
-    background: #0E05FF;
-    background: -webkit-linear-gradient(to top right, #0E05FF 0%, #000003 100%);
-    background: -moz-linear-gradient(to top right, #0E05FF 0%, #000003 100%);
-    background: linear-gradient(to top right, #0E05FF 0%, #000003 100%);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-}
+    font-family: 'Saira', sans-serif;
+    padding-top:20px;
+    align-items: center;
+    color:white; }
 
 
 .cta--burger {
     position: absolute;
-    top: 10px;
-    right: 23px;
-    height: 17px;
-    width: 20px;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -33,39 +26,60 @@ h1 {
     z-index: 2;
 }
 
+.cross {
+    height: 25px;
+    width: 25px;
+    top: 28px;
+    right: 28px;
+}
+
+.burger {
+    height: 35px;
+    width: 35px;
+    top: 23px;
+    right: 23px;
+}
+
 .cta--burger .trait {
     height: 2px;
     width: 100%;
-    background-color: #000;
+    background-color: white
 }
 .cta--burger .trait-small {
     height: 2px;
     width: 60%;
-    background-color: #000;
+    background-color: white;
 }
 
 header {
-    height: 100px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
 }
 
+.contentheader{
+display: flex;
+}
 
 .menu--burger {
     height: 10vh;
-    width: 35%;
-    background: linear-gradient(to right, black, #163BAF);
+    width: 170px;
+    background: linear-gradient(to right, #163BAF, black);
     color: whitesmoke;
-    opacity: 90%;
+    opacity: 100%;
     position: absolute;
     top: 0;
     right: 0;
-   
+    border-bottom-left-radius: 8px;
+
 }
 
 .opened {
     transform: translateX(0%);
+    transition: all 0.3s ease-in-out;
 }
 .closed {
     transform: translateX(100%);
+    transition: all 0.3s ease-in-out;
 }
 
 .menu--burger ul li {
@@ -73,7 +87,7 @@ header {
     text-align: left;
     padding-top: 5px;
     color: white;
-    font-style: 20px;
+    font-size: 20px;
 }
 
 .menu--burger ul {
@@ -82,3 +96,30 @@ header {
     margin-top: 0;
 }
 
+@media screen and (max-width:   524px) {
+    .plane{
+    height: 70px;
+    width: 85px;
+    margin-top: 10px;
+    }
+
+    .title {
+        text-align: center;
+        font-size: 35px;
+        line-height: 35px;
+    }
+}
+
+@media screen and (max-width:   1024px) {
+    .plane{
+    height: 70px;
+    width: 85px;
+    margin-top: 10px;
+    }
+
+    .title {
+        text-align: center;
+        font-size: 35px;
+        line-height: 35px;
+    }
+}
