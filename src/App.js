@@ -29,7 +29,7 @@ const App=()=> {
     
     getData();
 
-    const interval = setInterval(getData,10000)
+    const interval = setInterval(getData,1000)
     
   },[])
 
@@ -37,7 +37,7 @@ const App=()=> {
     // GEOLOCATION FUNCTION
     const [lat, setLat] = useState(null);
     const [lng, setLng] = useState(null);
-    const [zoom, setZoom] = useState(1)
+    const [zoom, setZoom] = useState(2)
     
 
     // COUNT FUNCTION
@@ -48,7 +48,7 @@ const App=()=> {
     <div className="App">
       <Header/>
       <Routes>
-            <Route path="/" element={<HomePage flights={data} setCountryFilter={setCountryFilter} countryFilter={countryFilter} setFlightNumberFilter={setFlightNumberFilter} flightNumberFilter={flightNumberFilter} setLat={setLat} setLng={setLng} lat={lat} lng={lng} zoom={zoom} setZoom={setZoom} count={count} setCount={setCount} />} />
+            <Route path="/WildFligthFinder/" element={<HomePage flights={data} setCountryFilter={setCountryFilter} countryFilter={countryFilter} setFlightNumberFilter={setFlightNumberFilter} flightNumberFilter={flightNumberFilter} setLat={setLat} setLng={setLng} lat={lat} lng={lng} zoom={zoom} setZoom={setZoom} count={count} setCount={setCount} />} />
             <Route path="/contact" element={<Contact/>}/>
       </Routes>  
       <Footer/>
@@ -57,4 +57,3 @@ const App=()=> {
 }
 
 export default App;
-
