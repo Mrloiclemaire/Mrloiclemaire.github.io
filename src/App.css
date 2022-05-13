@@ -1,19 +1,15 @@
 .App {
-  
   text-align: center;
   background-image: url("./images/876002.jpg");
   background-repeat: no-repeat;
-  background-size:cover;
+  background-size: cover;
   background-position: center;
   background-position-y: top;
-
-  
 }
-
 
 ::-webkit-scrollbar {
   display: none;
-  }
+}
 
 .App-logo {
   height: 40vmin;
@@ -26,11 +22,17 @@
   }
 }
 
-
-body { margin: 0; padding: 0; 
-  overflow-x: hidden;}
-#map { position: absolute; top: 0; bottom: 0; width: 100%; }
-
+body {
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+}
+#map {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  width: 100%;
+}
 
 .App-header {
   background-color: #282c34;
@@ -46,4 +48,3 @@ body { margin: 0; padding: 0;
 .App-link {
   color: #61dafb;
 }
-

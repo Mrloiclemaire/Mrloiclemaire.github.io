@@ -1,65 +1,58 @@
-
 .flex-filter {
-    display: flex;
-    justify-content: center;
-    width : 100vw;
-    margin-top:0px;
-    vertical-align: center;
+  display: flex;
+  justify-content: center;
+  width: 100vw;
+  margin-top: 0px;
+  vertical-align: center;
 }
 
 ul {
-    margin-right: 10px;
-    font-family: 'Saira', sans-serif;
-    font-size: 18px;
-    color: white;
+  margin-right: 10px;
+  font-family: "Saira", sans-serif;
+  font-size: 18px;
+  color: white;
 }
 
-select, input {
-    height: 22px;
-    border-radius: 5px;
-    border: solid 1px darkblue;
-    background-color: white
-    
-    
+select,
+input {
+  height: 22px;
+  border-radius: 5px;
+  border: solid 1px darkblue;
+  background-color: white;
 }
 
-input:focus{
-    background-color: #b9dbf0;
+input:focus {
+  background-color: #b9dbf0;
 }
 
-::placeholder{
-    color:black;
-
+::placeholder {
+  color: black;
 }
-
 
 .filter-country {
-    margin-bottom: 20px;
-    
-
+  margin-bottom: 20px;
 }
 
 .filter-number {
-    text-align: center;
-    margin-top: inherit;
+  text-align: center;
+  margin-top: inherit;
 }
 
 @media screen and (max-width: 576px) {
-    .flex-filter {
-    
-        display: inline-block;
-        width : 98vw;
-        margin-top:20px;
-        vertical-align: center;
-    }
-    ul {
-        margin-right: 10px;
-        margin-bottom: 5px;
-        font-family: 'Saira', sans-serif;
-        font-size: 15px;
-    }
+  .flex-filter {
+    display: inline-block;
+    width: 98vw;
+    margin-top: 20px;
+    vertical-align: center;
+  }
+  ul {
+    margin-right: 10px;
+    margin-bottom: 5px;
+    font-family: "Saira", sans-serif;
+    font-size: 15px;
+  }
 
-    .filter-number {
-        margin-top: 0px;
-    }
+  .filter-number {
+    margin-top: 0px;
+  }
 }

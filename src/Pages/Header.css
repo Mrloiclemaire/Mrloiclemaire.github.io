@@ -1,125 +1,122 @@
 .plane {
-
-    height: 120px;
-    width: 200px;
-    margin-left: 10px;
-    margin-top: 0px;
-    float : left;
-    padding-top:20px;
+  height: 120px;
+  width: 200px;
+  margin-left: 10px;
+  margin-top: 0px;
+  float: left;
+  padding-top: 20px;
 }
 
-
-.title{
-    font-size: 50px;
-    font-family: 'Saira', sans-serif;
-    padding-top:20px;
-    align-items: center;
-    color:white; }
-
+.title {
+  font-size: 50px;
+  font-family: "Saira", sans-serif;
+  padding-top: 20px;
+  align-items: center;
+  color: white;
+}
 
 .cta--burger {
-    position: absolute;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: space-between;
-    z-index: 2;
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  z-index: 2;
 }
 
 .cross {
-    height: 25px;
-    width: 25px;
-    top: 28px;
-    right: 28px;
+  height: 25px;
+  width: 25px;
+  top: 28px;
+  right: 28px;
 }
 
 .burger {
-    height: 35px;
-    width: 35px;
-    top: 23px;
-    right: 23px;
+  height: 35px;
+  width: 35px;
+  top: 23px;
+  right: 23px;
 }
 
 .cta--burger .trait {
-    height: 2px;
-    width: 100%;
-    background-color: white
+  height: 2px;
+  width: 100%;
+  background-color: white;
 }
 .cta--burger .trait-small {
-    height: 2px;
-    width: 60%;
-    background-color: white;
+  height: 2px;
+  width: 60%;
+  background-color: white;
 }
 
 header {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
 }
 
-.contentheader{
-display: flex;
+.contentheader {
+  display: flex;
 }
 
 .menu--burger {
-    height: 10vh;
-    width: 170px;
-    background: linear-gradient(to right, #163BAF, black);
-    color: whitesmoke;
-    opacity: 100%;
-    position: absolute;
-    top: 0;
-    right: 0;
-    border-bottom-left-radius: 8px;
-
+  height: 10vh;
+  width: 170px;
+  background: linear-gradient(to right, #163baf, black);
+  color: whitesmoke;
+  opacity: 100%;
+  position: absolute;
+  top: 0;
+  right: 0;
+  border-bottom-left-radius: 8px;
 }
 
 .opened {
-    transform: translateX(0%);
-    transition: all 0.3s ease-in-out;
+  transform: translateX(0%);
+  transition: all 0.3s ease-in-out;
 }
 .closed {
-    transform: translateX(100%);
-    transition: all 0.3s ease-in-out;
+  transform: translateX(100%);
+  transition: all 0.3s ease-in-out;
 }
 
 .menu--burger ul li {
-    list-style: none;
-    text-align: left;
-    padding-top: 5px;
-    color: white;
-    font-size: 20px;
+  list-style: none;
+  text-align: left;
+  padding-top: 5px;
+  color: white;
+  font-size: 20px;
 }
 
 .menu--burger ul {
-    padding-left: 15px;
-    padding-top: 5px;
-    margin-top: 0;
+  padding-left: 15px;
+  padding-top: 5px;
+  margin-top: 0;
 }
 
-@media screen and (max-width:   524px) {
-    .plane{
+@media screen and (max-width: 524px) {
+  .plane {
     height: 70px;
     width: 85px;
     margin-top: 10px;
-    }
+  }
 
-    .title {
-        text-align: center;
-        font-size: 35px;
-        line-height: 35px;
-    }
+  .title {
+    text-align: center;
+    font-size: 35px;
+    line-height: 35px;
+  }
 }
 
-@media screen and (max-width:   1024px) {
-    .plane{
+@media screen and (max-width: 1024px) {
+  .plane {
     height: 70px;
     width: 85px;
     margin-top: 10px;
-    }
+  }
 
-    .title {
-        text-align: center;
-        font-size: 35px;
-        line-height: 35px;
-    }
+  .title {
+    text-align: center;
+    font-size: 35px;
+    line-height: 35px;
+  }
 }
